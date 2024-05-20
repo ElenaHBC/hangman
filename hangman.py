@@ -15,9 +15,9 @@ game_status(computer_choice)
 
 # function for player's letter input
 
-tries = 0
 
 def player_letter(game_status):
+   tries = 0
    while tries <= len(computer_choice):
     user_input = str(input("Guess a letter: "))
     tries += 1
