@@ -22,11 +22,15 @@ def player_letter(game_status):
     user_input = str(input("Guess a letter: "))
     tries += 1
     if user_input in computer_choice:
-      game_status = status.replace("_ ", user_input)
+      position = computer_choice.find(user_input)
+      game_status = status[:position] + user_input + status[position + 1:]
       print(game_status)
       print(f"You have", len(computer_choice) - tries, "tries left.")
     else:
       print("Sorry, this letter is not in the word. Guess another letter: ")
       print(game_status)
       print(f"You have", len(computer_choice) - tries, "tries left.")
+    if "_" not in status:
+            print("Congratulations! You've guessed the word correctly.")
+            break
 
