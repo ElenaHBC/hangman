@@ -19,7 +19,7 @@ status = game_status(computer_choice)
 def player_letter(game_status):
    tries = 0
    max_tries = len(computer_choice) + 3
-   while tries <= max_tries:
+   while tries < max_tries:
     user_input = str(input("Guess a letter: "))
     tries += 1
     if user_input in computer_choice:
@@ -34,4 +34,5 @@ def player_letter(game_status):
     if "_" not in status:
             print("Congratulations! You've guessed the word correctly.")
             break
-
+   else:
+      print(f"Game over! The word was: {computer_choice}") 
