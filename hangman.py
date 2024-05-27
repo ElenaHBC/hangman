@@ -23,7 +23,10 @@ def player_letter(game_status):
     tries += 1
     if user_input in computer_choice:
       game_status = status.replace("_ ", user_input)
+      print(game_status)
+      print(f"You have", len(computer_choice) - tries, "tries left.")
     else:
       print("Sorry, this letter is not in the word. Guess another letter: ")
+      print(game_status)
+      print(f"You have", len(computer_choice) - tries, "tries left.")
 
-    # AttributeError: 'function' object has no attribute 'replace', even when status = str("_ " * n)
