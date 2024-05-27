@@ -11,7 +11,7 @@ def game_status(computer_choice):
     n = len(computer_choice)
     status = "_ " * n
     return status
-game_status(computer_choice)
+status = game_status(computer_choice)
 
 # function for player's letter input
 
@@ -22,7 +22,7 @@ def player_letter(game_status):
     user_input = str(input("Guess a letter: "))
     tries += 1
     if user_input in computer_choice:
-      game_status = game_status.replace("_ ", user_input)
+      game_status = status.replace("_ ", user_input)
     else:
       print("Sorry, this letter is not in the word. Guess another letter: ")
 
