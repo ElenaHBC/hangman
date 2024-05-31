@@ -23,6 +23,10 @@ def player_letter(status): # using the global variable status
    while tries < max_tries:
     user_input = str(input("Guess a letter: "))
     tries += 1
+
+    # add an if statemnet checking if the input is a number
+    # add a possibility for the user to guess the whole word in one try?
+
     if user_input in computer_choice:
       position = computer_choice.find(user_input)
       status = status[:position] + user_input + status[position + 1:] # we're already using the global variable outside the function
